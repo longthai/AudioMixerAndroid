@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@layout/activity_main"
+    tools:ignore="UnusedNavigation">
+
+    <activity android:id="@+id/mainActivity"
+        android:name="com.longthai.audiomixer.ui.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main">
+
+
+        <action android:id="@+id/action_mainactivity_to_RecordingActivity"
+            app:enterAnim="@anim/slide_in_right_activity"
+            app:exitAnim="@anim/slide_in_left_activity"
+            app:destination="@id/RecordingActivity"/>
+
+
+
+    </activity>
+
+
+
+    <activity android:id="@+id/RecordingActivity"
+        android:name="com.longthai.audiomixer.ui.RecordingActivity"
+        android:label="activity_Recording"
+        tools:layout="@layout/activity_recording"/>
+
+
+
+
+
+
+</navigation>

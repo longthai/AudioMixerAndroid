@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:id="@+id/itemview"
+            android:layout_width="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+
+<ImageView
+    android:id="@+id/songnamelogo"
+    android:background="@drawable/music"
+    android:layout_marginTop="@dimen/_14sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_width="@dimen/_20sdp"
+    android:layout_height="@dimen/_20sdp"/>
+
+<TextView
+    android:id="@+id/songname_"
+    android:layout_toEndOf="@id/songnamelogo"
+    android:layout_width="wrap_content"
+    android:fontFamily="monospace"
+    android:textSize="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:text="asasassdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd"
+    android:layout_height="wrap_content"/>
+
+<ImageView
+    android:id="@+id/singernamelogo"
+    android:layout_below="@id/songname_"
+    android:background="@drawable/microphone"
+    android:layout_marginTop="@dimen/_14sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_width="@dimen/_20sdp"
+    android:layout_height="@dimen/_20sdp"/>
+
+            <TextView
+                android:id="@+id/singername_"
+                android:layout_toEndOf="@id/singernamelogo"
+                android:layout_below="@id/songname_"
+                android:layout_width="wrap_content"
+                android:fontFamily="monospace"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:text="asasassdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/licensedlogo"
+                android:layout_below="@id/singername_"
+                android:background="@drawable/award"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"/>
+
+            <TextView
+                android:id="@+id/licensed_"
+                android:layout_toEndOf="@id/licensedlogo"
+                android:layout_below="@id/singername_"
+                android:layout_width="wrap_content"
+                android:fontFamily="monospace"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="lissajksjaksjaksjakjsakjsakjsazxzxzxzxzxzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:id="@+id/Item_ID"
+                android:layout_below="@id/licensed_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:text="232323232"/>
+
+
+
+
+            <ImageView
+                android:id="@+id/playsong_"
+                android:layout_below="@id/licensed_"
+                android:background="@drawable/ic_play_"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"/>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</RelativeLayout>
