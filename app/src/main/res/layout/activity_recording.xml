@@ -81,7 +81,28 @@
       android:layout_centerHorizontal="true"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Start Mixing.."/>
+      android:text="Download Mixing Audio"/>
+
+
+  <Button
+      android:id="@+id/playmixingAudio"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:layout_below="@id/startmixing"
+      android:layout_centerHorizontal="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Play Mixing Audio."/>
+
+
+  <Button
+      android:id="@+id/stopmixingAudio"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:layout_below="@id/playmixingAudio"
+      android:layout_centerHorizontal="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Stop Mixing Audio."/>
+
 
 
   <ProgressBar

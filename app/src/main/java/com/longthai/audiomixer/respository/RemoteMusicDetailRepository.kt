@@ -15,7 +15,7 @@ class RemoteMusicDetailRepository {
         val mutableLiveData = MutableLiveData<MusicDetails>()
 
         RetrofitApiService().fetchDataDetails(
-            auth = "Bearer nB8xwADbSS2X5y6xcBmo3wMCjoVpkF",
+            auth = "Bearer LsQSJNI5MCfnUjq8Q9XGCyi4kgSPYb",
             id = id
         )
             .enqueue(object : Callback<MusicDetails> {

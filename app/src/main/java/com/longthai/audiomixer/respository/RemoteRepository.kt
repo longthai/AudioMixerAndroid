@@ -13,7 +13,7 @@ class RemoteRepository {
     fun callAPI(query:String): MutableLiveData<Country> {
         val mutableLiveData = MutableLiveData<Country>()
 
-        RetrofitApiService().fetchData(auth = "Bearer nB8xwADbSS2X5y6xcBmo3wMCjoVpkF",query =query )
+        RetrofitApiService().fetchData(auth = "Bearer LsQSJNI5MCfnUjq8Q9XGCyi4kgSPYb",query =query )
             .enqueue(object : Callback<Country> {
                 override fun onFailure(call: Call<Country>, t: Throwable) {
                     Log.d("Error", "Coudn't get the data")

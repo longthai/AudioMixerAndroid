@@ -1,6 +1,9 @@
 package com.longthai.audiomixer.ui
 
 import android.app.ProgressDialog
+import android.media.AudioManager
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
@@ -18,6 +21,8 @@ import zeroonezero.android.audio_mixer.AudioMixer.ProcessingListener
 import zeroonezero.android.audio_mixer.input.AudioInput
 import zeroonezero.android.audio_mixer.input.BlankAudioInput
 import zeroonezero.android.audio_mixer.input.GeneralAudioInput
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class RecordingActivity : AppCompatActivity() {
@@ -25,16 +30,24 @@ class RecordingActivity : AppCompatActivity() {
 
 
     var mProgressBar: ProgressBar? = null
-    var song0:String =""
-    var song1:String =""
-
+    var song0:String = ""
+    var song1:String = ""
+    var currentDateandTime : String = ""
     private lateinit var viewModel: RecordingViewModel
     var checkwhatneedSeqorPara:Boolean = false
+
+    var playerOne:MediaPlayer = MediaPlayer()
+    var playerTwo:MediaPlayer = MediaPlayer()
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recording)
+
+        val sdf = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
+         currentDateandTime = sdf.format(Date())
 
 
         val myList = intent.getSerializableExtra("list") as ArrayList<Int>
@@ -58,8 +71,37 @@ class RecordingActivity : AppCompatActivity() {
         }
 
 
+        playmixingAudio.isEnabled = true
+        stopmixingAudio.isEnabled = false
+
+
+        playmixingAudio.setOnClickListener {
+            playmixingAudio.isEnabled = false
+            stopmixingAudio.isEnabled = true
+
+            SetUpMixingAudioPlayer()
+
+        }
+
+        stopmixingAudio.setOnClickListener {
+
+            playmixingAudio.isEnabled = true
+            stopmixingAudio.isEnabled = false
+            StopPlayingMixingAudioPlayer()
+
+        }
+
+
+
 
     }
+
+
+
+
+
+
+
 
 
     fun  InitilizeUI(id0:Int ,id1: Int){
@@ -105,7 +147,39 @@ class RecordingActivity : AppCompatActivity() {
     }
 
 
+fun SetUpMixingAudioPlayer(){
 
+    playerOne.setAudioStreamType(AudioManager.STREAM_MUSIC);
+    playerOne.setDataSource(this, Uri.parse(song0));
+    playerOne.prepare()
+    playerOne.start()
+    playerOne.isLooping = true
+
+    playerTwo.setAudioStreamType(AudioManager.STREAM_MUSIC);
+    playerTwo.setDataSource(this, Uri.parse(song1));
+    playerTwo.prepare()
+    playerTwo.isLooping = true
+    playerTwo.start()
+}
+
+
+
+
+
+
+
+
+    fun StopPlayingMixingAudioPlayer(){
+
+
+        playerOne.stop()
+        playerOne.release()
+
+
+
+        playerTwo.stop()
+        playerTwo.release()
+    }
 
 fun startmxingaudio(){
 
@@ -126,7 +200,7 @@ fun startmxingaudio(){
 
     val blankInput: AudioInput = BlankAudioInput(1000000)
     val input2: AudioInput = GeneralAudioInput(song1)
-    val outputPath: String = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" +"Download"+"/"+"audio_mixer_output.mp3";
+    val outputPath: String = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" +"Download"+"/"+"AMO_${currentDateandTime}.mp3";
     val audioMixer = AudioMixer(outputPath)
     audioMixer.addDataSource(input1)
     audioMixer.addDataSource(blankInput)
