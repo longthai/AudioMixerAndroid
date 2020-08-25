@@ -41,7 +41,7 @@
 </p>
 
 <h3>OAuth2 authentication</h3>
-<p>You need to change the bearer token (each token valid for 24 hours) for the Freesound API with the following steps (More information and instruction <a href="shorturl.at/fDU17">here</a>):</p> 
+<p>You need to change the bearer token (each token valid for 24 hours) for the Freesound API with the following steps (More information and instruction <a href="https://freesound.org/docs/api/authentication.html#oauth2-authentication">here</a>):</p> 
 <p><b>Step 1:</b> Create your Freesound account, where you get your client_id and client_secret.</p>
 <p><b>Step 2:</b> In Postman, send a GET request to Freesound to get authorization code. Copy the link (in the red box) to your browser and grant permission to the app to get the code.</br>
 <img src="https://i.imgur.com/aKimMuw.png" alt="step 2" style="vertical-align:middle;margin:0px 50px"></p>
