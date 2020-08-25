@@ -48,6 +48,6 @@
 <p><b>Step 3:</b> In Postmen, send a POST request to get your access_token for the app with the "code" you get on the website in step 2</br>
 <img src="https://i.imgur.com/PXIrIRY.png" alt="step 3" style="vertical-align:middle;margin:0px 50px"></p>
 <p><b>Step 4: </b> Copy the new access_token and change in RemoteMusicDetailRepository.kt and RemoteRepository.kt in "repository" package. After you change the token, the app should be running.</br>
-<img src="https://i.imgur.com/tHfqwfL.png" alt="step 4" style="vertical-align:middle;margin:0px 50px"></p>
+<img src="https://i.imgur.com/WmXsaXf.png" alt="step 4" style="vertical-align:middle;margin:0px 50px"></p>
   
   
