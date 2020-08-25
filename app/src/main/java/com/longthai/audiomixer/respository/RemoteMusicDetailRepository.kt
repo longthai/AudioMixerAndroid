@@ -15,12 +15,12 @@ class RemoteMusicDetailRepository {
         val mutableLiveData = MutableLiveData<MusicDetails>()
 
         RetrofitApiService().fetchDataDetails(
-            auth = "Bearer LsQSJNI5MCfnUjq8Q9XGCyi4kgSPYb",
+            auth = "Bearer 86vGuYu2qL37lFUioQwd2Iyh6bLcsF",
             id = id
         )
             .enqueue(object : Callback<MusicDetails> {
                 override fun onFailure(call: Call<MusicDetails>, t: Throwable) {
-                    Log.d("Error", "Coudn't get the data")
+                    Log.d("Error", "Couldn't get the data")
 
                 }
 
@@ -31,7 +31,7 @@ class RemoteMusicDetailRepository {
                     if (response.isSuccessful) {
                         mutableLiveData.postValue(response.body())
                     } else {
-                        Log.d("Error", "Coudn't get the data")
+                        Log.d("Error", "Couldn't get the data")
                     }
                 }
             })

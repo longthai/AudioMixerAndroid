@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() , MusicCounterListener,BucketRefresher 
     var mProgressBar: ProgressBar? = null
     private lateinit var viewModel: MainViewModel
     val REQUEST_ID_MULTIPLE_PERMISSIONS = 7
-    var query:String = "bike"
+    var query:String = "scream"
     var countermusic:Int = 0
     val Selectionlist = ArrayList<Int>()
      companion object{
