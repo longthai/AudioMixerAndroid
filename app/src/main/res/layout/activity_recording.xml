@@ -49,6 +49,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="@dimen/_10sdp"
       android:layout_marginStart="@dimen/_120sdp"
+      android:visibility="invisible"
       android:text="PARALLEL"/>
 
 
@@ -65,33 +66,24 @@
       android:text="SEQUENTIAL"/>
 
 
-
-<TextView
-    android:layout_below="@id/SEQUENTIALmixing"
-    android:layout_centerHorizontal="true"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="By Default is Parallel"/>
-
-
   <Button
       android:id="@+id/startmixing"
-      android:layout_marginTop="@dimen/_40sdp"
-      android:layout_below="@id/SEQUENTIALmixing"
+      android:layout_marginTop="@dimen/_10sdp"
+      android:layout_below="@id/stopmixingAudio"
       android:layout_centerHorizontal="true"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Download Mixing Audio"/>
+      android:text="Save Mixed Audio"/>
 
 
   <Button
       android:id="@+id/playmixingAudio"
       android:layout_marginTop="@dimen/_10sdp"
-      android:layout_below="@id/startmixing"
+      android:layout_below="@id/SEQUENTIALmixing"
       android:layout_centerHorizontal="true"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Play Mixing Audio."/>
+      android:text="Play Mixed Audio"/>
 
 
   <Button
@@ -101,7 +93,7 @@
       android:layout_centerHorizontal="true"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Stop Mixing Audio."/>
+      android:text="Stop Mixed Audio"/>
 
 
 
